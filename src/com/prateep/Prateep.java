@@ -33,7 +33,7 @@ public class Prateep extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Item itemdata;
 	private List<Item> list=new ArrayList<Item>();
-	private String[] possible_item_names={"你好", "Bar", "Baz", "Bop"};
+	private String[] possible_item_names={"你好", "మొబైల్", "Baz", "Bop"};
 	private static int NUM_ITEMS = 10000;
 	private int id=0;
 	Random rn = new Random();
