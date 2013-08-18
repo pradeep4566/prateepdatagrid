@@ -20,7 +20,7 @@
             
             dojo.ready(function(){
             	
-            	mystore=new dojox.data.QueryReadStore({url:"/Prateep"});
+            	mystore=new dojox.data.QueryReadStore({url:"/prateepdatagrid/Prateep"});
             	
             	grid = new dojox.grid.DataGrid({
                     store: mystore,
@@ -36,6 +36,20 @@
                 },dojo.byId("gridContainer"));
                 
                 grid.startup();
+            });
+            
+            
+            require(["dojo/_base/xhr"], function(xhr){
+               
+                xhr.get({
+                    url:"/NewFile.jsp",
+                    handleAs:"json",
+                    load: function(data){
+                        for(var i in data){
+                           console.log("key", i, "value", data[i]);
+                        }
+                    }
+                });
             });
         </script>
     <head>
